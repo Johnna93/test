@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Games</title>
+    <style>
+        body {
+            margin-top: 0;
+            padding-bottom: 1000px;
+        }
+
+        .fun-script {
+            background-color: rgb(250, 250, 250);
+            box-shadow: 0px 0px 3px rgba(255, 54, 54, 0.6);
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            margin-top: 15%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        h3 {
+            font-family: Arial;
+            font-size: 22px;
+            color: #f20f30;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        button {
+            padding: 5px 10px;
+
+            text-transform: uppercase;
+            border: none;
+            background-color: #f20f30;
+            color: #fff;
+            font-family: Tahoma;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: background-color .5s;
+        }
+
+        button:hover {
+            background-color: rgb(240, 240, 240);
+            color: #f20f30;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fun-script">
+        <button type="button" onclick="myFunction3()">Clear!</button>
+        <div style="display: flex;
+        justify-content: center;
+        align-items: center;">
+            <h3>Do you love me?</h3>
+        </div>
+
+        <div style="display: flex;
+        justify-content: center;
+        align-items: center;">
+            <button type="button" onclick="myFunction1()">YES</button>
+            <button type="button" onclick="myFunction2()">No</button>
+        </div>
+        <h3 style="display: none; text-align: center;" id="agree">Yes, I love you very much!</h3>
+        <h3 style="display: none; text-align: center;" id="disagree">No, I love you even more than you annoy me and
+            thats a
+            lot!</h3>
+
+    </div>
+
+    <script>
+        function myFunction1() {
+            document.getElementById("agree").style.display = "block";
+            document.getElementById("disagree").style.display = "none";
+        }
+
+        function myFunction2() {
+            document.getElementById("disagree").style.display = "block";
+            document.getElementById("agree").style.display = "none";
+            document.getElementById("disagree").style.color = "blue";
+        }
+
+        function myFunction3() {
+            document.getElementById("disagree").style.display = "none";
+            document.getElementById("agree").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
